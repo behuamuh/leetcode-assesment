@@ -50,7 +50,7 @@ export const getNewCursor = ({ cursor, newValue, lastValue }) => {
 
     if (isCursorOnEnd) {
       res = newValue.length;
-    } else if (newValue.length === 3) {
+    } else if (newValue.length === 3 || newValue.length > 3 && cursor === 5) {
       res = cursor - 1;
     }
   }
